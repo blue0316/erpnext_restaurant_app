@@ -1,0 +1,214 @@
+article {
+    display: block;
+}
+
+.food-command-container {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    padding: var(--margin-grid) !important;
+    height: 250px;
+    flex-basis: 20%;
+    width: 20%;
+    overflow: hidden;
+}
+
+.food-command-container .food-command {
+    position: relative;
+    height: 100%;width: 100%;
+    border: var(--default_line);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.food-command-container .food-command .row {
+    margin: 0;
+}
+
+.food-command-container .food-command-title {
+    height: 40px;
+    padding:  0 10px;
+    background-color: var(--fill_color);
+}
+
+.food-command-container .food-command-title h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+.food-command-container .food-command-title span {
+    display: block;
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+}
+
+.food-command-container .food-command-title strong {
+    display: block;
+}
+
+.food-command-container .food-command-main-title {
+    display: -webkit-box;
+    padding: 0 20px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.food-command-container .food-command-detail {
+    height: 70px;
+    display: block;
+    margin: 10px 0 0;
+}
+
+.food-command-container .product-notes {
+    background-color: var(--bg-red);
+    padding: 5px;
+}
+
+.food-command-container .food-command-footer {
+    position: absolute;
+    bottom: -1px;
+    height: 40px;
+    width: 100%;
+    display: table;
+}
+
+.food-command-container .food-command-footer > div {
+    width: 50%;
+}
+
+.food-command-container .btn-food-command {
+    display: block !important;
+    height: 40px;
+    margin: 0;
+}
+
+.food-command-container .btn-food-command.status-label {
+    cursor: default !important;
+    opacity: 1 !important;
+    color: white;
+}
+
+.food-command-container .status-label-icon {
+    font-size: 20px;
+}
+
+.food-command-container .product-notes.empty {
+    display: none !important;
+}
+
+.food-command-container .alert-time {
+    animation: alerttime 2s linear infinite;
+}
+
+.food-command-container .food-command-body {
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+}
+
+.food-command-title .food-body-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    bottom: 40px;
+    background: #ddd;
+    opacity: 0;
+    transition: opacity .3s;
+    z-index: -1;
+}
+
+.food-command-title .food-body-cover .time-record {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 12px;
+    list-style: none;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+.food-command-title .food-body-cover .customer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+.food-command-title .food-body-cover:hover .time-record {
+    height: 0;
+}
+
+.food-command-title .food-body-cover:hover .customer-info {
+    height: 100%;
+}
+
+.food-command-title li {
+    display: flex;
+    align-items: center;
+}
+
+.food-command-title ul span {
+    font-weight: 600;
+}
+
+.food-command-title:hover .food-body-cover {
+    opacity: 1;
+    z-index: 10;
+}
+
+.food-command-container table {
+    width: 100%;
+}
+
+.food-command-container thead td {
+    width: 25%;
+    font-weight: 600;
+}
+
+.food-command-container thead {
+    border-bottom: 2px solid #222;
+}
+
+.food-command-container thead td {
+    width: 25%;
+    font-weight: 600;
+}
+
+.food-command-container tbody td {
+    font-size: 12px;
+}
+
+.food-command-container tbody tr:not(:last-child) {
+    border-bottom: 1px solid #222;
+}
+
+.food-command-container .tb-order-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+@keyframes alerttime {
+    50% {
+        opacity: 0.4;
+    }
+}
